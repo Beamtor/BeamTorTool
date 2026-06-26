@@ -2,17 +2,18 @@
 
 require_relative 'version'
 require_relative 'constants'
+require_relative 'menu'
+require_relative 'toolbar'
 
 module BeamTor
 
-  module Loader
+  puts "=================================="
+  puts EXTENSION_NAME
+  puts "Version : #{VERSION}"
+  puts "Loaded Successfully"
+  puts "=================================="
 
-    def self.load
-      puts "#{EXTENSION_NAME} v#{VERSION} loaded."
-    end
-
-  end
+  Menu.create
+  Toolbar.create
 
 end
-
-BeamTor::Loader.load
