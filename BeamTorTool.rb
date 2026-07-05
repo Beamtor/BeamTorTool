@@ -9,7 +9,7 @@ module BeamTorTool
     extension = SketchupExtension.new('Beam Tor Tool', loader_path)
     extension.description = 'RC Structure Detailing Tool for SketchUp (Beam, Column, Footing)'
     extension.version     = '0.0.1'
-    extension.creator     = 'Adinan Chansaeng (Tor)'
+    extension.creator     = 'Adinan Jansaeng (Tor)'
     extension.copyright   = '2026'
     
     Sketchup.register_extension(extension, true)
