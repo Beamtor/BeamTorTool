@@ -1,21 +1,20 @@
-# frozen_string_literal: true
-
 require 'sketchup.rb'
 require 'extensions.rb'
 
-unless file_loaded?(__FILE__)
-
-  extension = SketchupExtension.new(
-    'Beam Tor Tool',
-    'BeamTorTool/src/beam_tor/loader'
-  )
-
-  extension.description = 'Beam Tor Tool for Reinforced Concrete Modeling'
-  extension.version     = '0.0.1'
-  extension.creator     = 'BeamTor'
-
-  Sketchup.register_extension(extension, true)
-
-  file_loaded(__FILE__)
-
+module BeamTorTool
+  unless file_loaded?(__FILE__)
+    
+    loader_path = File.join(File.dirname(__FILE__), 'BeamTorTool', 'src', 'beam_tor', 'loader.rb')
+    
+    extension = SketchupExtension.new('Beam Tor Tool', loader_path)
+    
+    extension.description = 'RC Structure Detailing Tool for SketchUp (Beam, Column, Footing)'
+    extension.version     = '0.0.1'
+    extension.creator     = 'Adinan Chansaeng (Tor)'
+    extension.copyright   = '2026'
+    
+    Sketchup.register_extension(extension, true)
+    
+    file_loaded(__FILE__)
+  end
 end

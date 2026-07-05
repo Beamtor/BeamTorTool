@@ -1,7 +1,4 @@
-# frozen_string_literal: true
-
-module BeamTor
-
-  EXTENSION_NAME = "Beam Tor Tool"
-
+module BeamTorTool
+  PLUGIN_NAME = 'Beam Tor Tool'.freeze
+  PLUGIN_AUTHOR = 'Adinan Chansaeng (Tor)'.freeze
 end
